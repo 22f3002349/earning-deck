@@ -1,18 +1,20 @@
 # Quarterly Highlights (Markdown)
 
-- **Revenue growth** driven by core payments and merchant services
-- **Cost optimization** across infrastructure and vendor contracts
-- **Risk metrics** remain within appetite; credit losses trending stable
-- **Strategic outlook**: expanding API-first onboarding and instant payouts
+**Contact:** 22f3002349@ds.study.iitm.ac.in
 
---
+- Revenue growth in payments & merchant services
+- Infrastructure cost optimization
+- Risk metrics within appetite; stable losses
+- Outlook: API-first onboarding, instant payouts
+
+---
 
 ### Segment Performance (Markdown)
 
-| Segment | QoQ Growth | Notes |
-|--------:|-----------:|:------|
-| Retail Banking | 3.2% | Card spends healthy |
-| Corporate | 1.4% | FX revenues softer |
-| Payments | 6.9% | UPI volumes strong |
+| Segment         | QoQ Growth | Notes                |
+|-----------------|-----------:|----------------------|
+| Retail Banking  | 3.2%       | Card spends healthy  |
+| Corporate       | 1.4%       | Softer FX revenues   |
+| Payments        | 6.9%       | UPI volumes strong   >
 
-> Speaker cue: Call out non-linearities due to seasonality.
+> Speaker cue: Seasonality affects non-linearities.
