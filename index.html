@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quarterly Earnings — Interactive RevealJS Deck</title>
+
+    <!-- Reveal.js core CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reveal.css" />
+    <!-- Theme -->
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/theme/black.css" id="theme" />
+    <!-- Code highlight theme -->
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/plugin/highlight/monokai.css" />
+    <style>
+      .footnote { font-size: 0.6em; opacity: 0.8; margin-top: 1rem; }
+      .kpi { font-size: 1.25em; }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Title slide (contains email) -->
+        <section>
+          <h1>Quarterly Earnings Report</h1>
+          <h3>Interactive Presentation (RevealJS)</h3>
+          <p>Prepared by: <strong>Technical Consultant</strong></p>
+          <p>Email: <a href="mailto:22f3002349@ds.study.iitm.ac.in">22f3002349@ds.study.iitm.ac.in</a></p>
+          <aside class="notes">
+            Welcome everyone. Use these notes while presenting. Press 's' to open the speaker view.
+            We'll walk through KPIs, code-based insights, and financial formulas.
+          </aside>
+        </section>
+
+        <!-- Markdown slide(s) loaded from slides.md -->
+        <section data-markdown="slides.md"
+                 data-separator="^---$"
+                 data-separator-vertical="^--$"
+                 data-charset="utf-8">
+        </section>
+
+        <!-- Fragments (animated bullet reveal) -->
+        <section>
+          <h2>Key KPIs (Q-o-Q)</h2>
+          <ul>
+            <li class="fragment">Net Revenue: <span class="kpi">$1.24B</span></li>
+            <li class="fragment">Operating Margin: <span class="kpi">18.2%</span></li>
+            <li class="fragment">EPS (Diluted): <span class="kpi">$1.09</span></li>
+            <li class="fragment">Active Customers: <span class="kpi">+6.4% QoQ</span></li>
+          </ul>
+          <div class="footnote fragment">Figures illustrative; replace with actuals before publishing.</div>
+          <aside class="notes">
+            Speak to drivers behind each KPI (pricing, volume, mix). Pause after each
+            fragment to discuss impacts and forward guidance.
+          </aside>
+        </section>
+
+        <!-- Code sample with syntax highlighting -->
+        <section>
+          <h2>Code Sample: Simple NPV in Python</h2>
+          <pre><code class="language-python">
+import math
+
+def npv(rate, cashflows):
+    """Compute Net Present Value.
+
+    rate: discount rate as decimal (e.g., 0.1 for 10%)
+
+    cashflows: list of cash flows where cashflows[0] is initial outlay (negative)
+    """
+    return sum(cf / ((1 + rate) ** t) for t, cf in enumerate(cashflows))
+
+# Example:
+r = 0.12
+cfs = [-1000, 300, 350, 400, 500]
+print(npv(r, cfs))
+          </code></pre>
+          <aside class="notes">
+            This snippet demonstrates reproducible analytics embedded in narratives.
+            Consider linking to a repo with unit tests and CI for production use.
+          </aside>
+        </section>
+
+        <!-- Math (financial formulas) -->
+        <section>
+          <h2>Financial Equations</h2>
+          <p>Inline NPV: \( \mathrm{NPV} = \sum_{t=1}^{T} \frac{CF_t}{(1+r)^t} - C_0 \)</p>
+          <p>Block CAGR:</p>
+          <p>\[ \mathrm{CAGR} = \left(\frac{V_{\text{final}}}{V_{\text{initial}}}\right)^{\tfrac{1}{n}} - 1 \]</p>
+          <aside class="notes">
+            Reinforce intuition: discounting future cash flows, compounding growth rates,
+            sensitivity to r and horizon n.
+          </aside>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Core reveal.js -->
+    <script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
+    <!-- Plugins: Markdown, Notes, Highlight, Math -->
+    <script src="https://unpkg.com/reveal.js@5/plugin/markdown/markdown.js"></script>
+    <script src="https://unpkg.com/reveal.js@5/plugin/notes/notes.js"></script>
+    <script src="https://unpkg.com/reveal.js@5/plugin/highlight/highlight.js"></script>
+    <script src="https://unpkg.com/reveal.js@5/plugin/math/math.js"></script>
+
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: true,
+        plugins: [RevealMarkdown, RevealNotes, RevealHighlight, RevealMath.KaTeX],
+        // KaTeX configuration for math plugin
+        math: {
+          // KaTeX will be loaded from CDN automatically by plugin
+        }
+      });
+    </script>
+  </body>
+</html>
